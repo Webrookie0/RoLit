@@ -22,6 +22,7 @@ import {
   BuildingOffice2Icon,
   PlusIcon
 } from '@heroicons/react/24/outline';
+import rolitLogo from '../helpme.png';
 
 // Define dropdown menu items
 const productItems = [
@@ -106,7 +107,7 @@ export default function Navbar() {
   
   return (
     <>
-      <nav className={`relative w-full z-50 transition-all duration-300 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700`}>
+      <nav className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Left section: Logo, nav and search */}
@@ -129,9 +130,13 @@ export default function Navbar() {
             
               {/* Logo */}
               <Link to="/" className="flex-shrink-0 flex items-center">
-                <span className="text-xl font-bold text-gray-900 dark:text-white">
-                  Growex
-                </span>
+                <div className="h-12 flex items-center justify-center">
+                  <img 
+                    src={rolitLogo} 
+                    alt="Rolit" 
+                    className="h-full max-w-[140px] object-contain"
+                  />
+                </div>
               </Link>
               
               {/* Desktop Navigation Links */}
@@ -537,9 +542,6 @@ export default function Navbar() {
           </div>
         )}
       </nav>
-      
-      {/* Add padding for fixed navbar */}
-      <div className="h-16"></div>
     </>
   );
 }

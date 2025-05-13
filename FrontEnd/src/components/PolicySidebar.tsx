@@ -21,7 +21,7 @@ export default function PolicySidebar({ isVisible }: PolicySidebarProps) {
             to="/" 
             className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 hover:opacity-80 transition-opacity"
           >
-            adgorithm
+            RoLit
           </Link>
         </div>
 

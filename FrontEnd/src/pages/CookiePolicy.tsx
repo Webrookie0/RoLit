@@ -93,7 +93,7 @@ export default function CookiePolicy() {
                 <h2 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-cyan-700 dark:from-white dark:to-cyan-400">Contact Us</h2>
                 <div className="mt-3 prose prose-blue dark:prose-invert max-w-none">
                   <p className="text-gray-700 dark:text-gray-200">If you have any questions about our Cookie Policy, please contact us at:</p>
-                  <p className="text-gray-700 dark:text-gray-200">Email: privacy@adgorithm.com</p>
+                  <p className="text-gray-700 dark:text-gray-200">Email: privacy@RoLit.com</p>
                   <p className="text-gray-700 dark:text-gray-200">Address: 123 Innovation Way, Tech City, TC 12345, United States</p>
                 </div>
               </div>

@@ -117,7 +117,7 @@ export default function TermsOfService() {
                 <h2 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-violet-700 dark:from-white dark:to-violet-400">Contact Us</h2>
                 <div className="mt-3 prose prose-blue dark:prose-invert max-w-none">
                   <p className="text-gray-700 dark:text-gray-200">If you have any questions about these Terms, please contact us at:</p>
-                  <p className="text-gray-700 dark:text-gray-200">Email: legal@adgorithm.com</p>
+                  <p className="text-gray-700 dark:text-gray-200">Email: legal@RoLit.com</p>
                   <p className="text-gray-700 dark:text-gray-200">Address: 123 Innovation Way, Tech City, TC 12345, United States</p>
                 </div>
               </div>

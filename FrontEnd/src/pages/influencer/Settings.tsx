@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useTheme } from '../../contexts/ThemeContext';
+import { useTheme } from '../../hooks/useTheme';
 
 export default function InfluencerSettings() {
   const { theme } = useTheme();

@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useTheme } from '../../contexts/ThemeContext';
+import React, { useState } from 'react';
+import { useTheme } from '../../hooks/useTheme';
 
 export default function BrandSettings() {
   const { theme } = useTheme();

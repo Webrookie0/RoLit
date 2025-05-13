@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Toaster } from 'react-hot-toast';
 import { AuthProvider, useAuth } from './hooks/useAuth';
-import { ThemeProvider } from './contexts/ThemeContext';
+import { ThemeProvider } from './hooks/useTheme';
 import { useEffect } from 'react';
 
 // Pages
@@ -12,6 +12,7 @@ import Register from './pages/Register';
 import About from './pages/About';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import NotFound from './pages/NotFound';
+import Messages from './pages/Messages';
 
 // Brand Pages
 import BrandDashboard from './pages/brand/Dashboard';
@@ -31,6 +32,8 @@ import InfluencerProfile from './pages/influencer/Profile';
 // Components
 import Navbar from './components/Navbar';
 import ProtectedRoute from './components/ProtectedRoute';
+import ChatBot from './components/chatbot/ChatBot';
+import MessagingButton from './components/MessagingButton';
 
 // Global styles
 import './animations.css';
@@ -75,6 +78,11 @@ function App() {
                     <Route path="/register" element={<Register />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                    
+                    {/* Messages Route */}
+                    <Route path="/messages" element={<ProtectedRoute allowedRoles={['brand', 'influencer']} />}>
+                      <Route index element={<Messages />} />
+                    </Route>
 
                     {/* Brand Routes */}
                     <Route path="/brand" element={<ProtectedRoute allowedRoles={['brand']} />}>
@@ -105,6 +113,8 @@ function App() {
                   </Routes>
                 </PageTransition>
               </main>
+              <ChatBot />
+              <MessagingButton position="bottom-left" />
               <Toaster 
                 position="bottom-right" 
                 toastOptions={{

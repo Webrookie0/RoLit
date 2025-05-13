@@ -7,6 +7,7 @@ interface User {
   name: string;
   email: string;
   role: 'brand' | 'influencer';
+  avatar?: string;
 }
 
 interface AuthContextType {
