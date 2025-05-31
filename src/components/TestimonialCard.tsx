@@ -36,12 +36,12 @@ export default function TestimonialCard({ quote, author, role, avatar, delay = 0
         <p className="text-white font-medium relative z-20">{quote}</p>
         
         <div className="mt-4 flex items-center relative z-20">
-          <img 
-            src={avatar} 
-            alt={author} 
-            className="h-10 w-10 rounded-full mr-3 object-cover" 
-          />
-          <div>
+        <img 
+          src={avatar} 
+          alt={author} 
+          className="h-10 w-10 rounded-full mr-3 object-cover" 
+        />
+        <div>
             <h4 className="text-sm font-semibold text-white">{author}</h4>
             <p className="text-xs text-blue-200/70">{role}</p>
           </div>

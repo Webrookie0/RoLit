@@ -80,9 +80,9 @@ function AppContent() {
   const isMessagingPage = location.pathname.includes('messages');
   
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <ScrollToTop />
-      <Navbar />
+            <div className="min-h-screen bg-background text-foreground">
+              <ScrollToTop />
+              <Navbar />
       {isMessagingPage ? (
         <main className="p-0 animate-fade-in">
           <PageTransition>
@@ -100,55 +100,55 @@ function AppContent() {
           </PageTransition>
         </main>
       ) : (
-        <main className="container mx-auto px-4 py-8 animate-fade-in">
-          <PageTransition>
-            <Routes>
-              {/* Public Routes */}
-              <Route path="/" element={<Home />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              
-              {/* Brand Routes */}
-              <Route path="/brand" element={<ProtectedRoute allowedRoles={['brand']} />}>
-                <Route path="dashboard" element={<BrandDashboard />} />
-                <Route path="campaigns" element={<BrandCampaigns />} />
-                <Route path="analytics" element={<BrandAnalytics />} />
-                <Route path="settings" element={<BrandSettings />} />
-                <Route path="profile" element={<BrandProfile />} />
-              </Route>
+              <main className="container mx-auto px-4 py-8 animate-fade-in">
+                <PageTransition>
+                  <Routes>
+                    {/* Public Routes */}
+                    <Route path="/" element={<Home />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
-              {/* Influencer Routes */}
-              <Route path="/influencer" element={<ProtectedRoute allowedRoles={['influencer']} />}>
-                <Route path="dashboard" element={<InfluencerDashboard />} />
-                <Route path="campaigns" element={<InfluencerCampaigns />} />
-                <Route path="settings" element={<InfluencerSettings />} />
-                <Route path="profile" element={<InfluencerProfile />} />
-              </Route>
+                    {/* Brand Routes */}
+                    <Route path="/brand" element={<ProtectedRoute allowedRoles={['brand']} />}>
+                      <Route path="dashboard" element={<BrandDashboard />} />
+                      <Route path="campaigns" element={<BrandCampaigns />} />
+                      <Route path="analytics" element={<BrandAnalytics />} />
+                      <Route path="settings" element={<BrandSettings />} />
+                      <Route path="profile" element={<BrandProfile />} />
+                    </Route>
 
-              {/* Profile Redirect based on user role */}
-              <Route path="/profile" element={<ProtectedRoute allowedRoles={['brand', 'influencer']} />}>
-                <Route index element={<ProfileRedirect />} />
-              </Route>
+                    {/* Influencer Routes */}
+                    <Route path="/influencer" element={<ProtectedRoute allowedRoles={['influencer']} />}>
+                      <Route path="dashboard" element={<InfluencerDashboard />} />
+                      <Route path="campaigns" element={<InfluencerCampaigns />} />
+                      <Route path="settings" element={<InfluencerSettings />} />
+                      <Route path="profile" element={<InfluencerProfile />} />
+                    </Route>
 
-              {/* Catch all route */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </PageTransition>
-        </main>
+                    {/* Profile Redirect based on user role */}
+                    <Route path="/profile" element={<ProtectedRoute allowedRoles={['brand', 'influencer']} />}>
+                      <Route index element={<ProfileRedirect />} />
+                    </Route>
+
+                    {/* Catch all route */}
+                    <Route path="*" element={<NotFound />} />
+                  </Routes>
+                </PageTransition>
+              </main>
       )}
       
       {!isMessagingPage && <ChatBot />}
       {!isMessagingPage && <MessagingButton position="bottom-left" />}
-      <Toaster 
-        position="bottom-right" 
-        toastOptions={{
-          className: 'toast-animation',
-          duration: 3000,
-        }}
-      />
-    </div>
+              <Toaster 
+                position="bottom-right" 
+                toastOptions={{
+                  className: 'toast-animation',
+                  duration: 3000,
+                }}
+              />
+            </div>
   );
 }
 

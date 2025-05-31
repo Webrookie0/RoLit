@@ -345,21 +345,21 @@ export default function Home() {
       {/* Platform Benefits Section - moved to be separate from videos */}
       <section className="py-16 bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true, margin: '-100px' }}
-            className="relative"
-          >
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true, margin: '-100px' }}
+              className="relative"
+            >
             <h2 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl mb-6">
               Everything You Need In One Platform
             </h2>
             <p className="text-lg leading-8 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10">
-              Our comprehensive suite of tools streamlines the entire influencer marketing process from discovery to analytics.
-            </p>
-          </motion.div>
-        </div>
+                Our comprehensive suite of tools streamlines the entire influencer marketing process from discovery to analytics.
+              </p>
+            </motion.div>
+          </div>
       </section>
 
       {/* Stacked Feature Cards Section */}
@@ -703,4 +703,4 @@ export default function Home() {
       `}</style>
     </div>
   );
-} 
+}
